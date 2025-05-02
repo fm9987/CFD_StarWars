@@ -1,4 +1,4 @@
-## Step 1 (Geometry creation):
+# Step 1 (Geometry creation):
 - Import the .stl file of spaceship
 - Once you have that make sure the triangles are small
 - Use gmsh in case that the triangles are too big and save with new geometry
@@ -31,7 +31,7 @@ rm -r 0/"Name of file"
 
 
 
-## Step 2 (Simulation):
+# Step 2 (Simulation):
 - Once all else is done we can start the simulation on multiple cores (change the number in system/decomposeParDict):
 - (If ran locally)
 decomposePar
@@ -40,4 +40,4 @@ mpirun -np 8 rhoCentralFoam -parallel
 - Once the simulation is over you have to reconstruct it:
 reconstructPar
 
-### NOW YOUR SIMULATION IS READY TO BE LOOKED IN PARAVIEW!
+# NOW YOUR SIMULATION IS READY TO BE LOOKED IN PARAVIEW!
