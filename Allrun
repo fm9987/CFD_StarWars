@@ -7,7 +7,6 @@ cd ${0%/*} || exit 1    # Run from this directory
 ./Snappy #Generation of mesh from stl in the zip file in home directory
 
 rm -r log.decomposePar
-rm -r log.reconstructPar
 runApplication decomposePar # Splits into cores
 runParallel rhoCentralFoam # Simulation
 runApplication reconstructPar # Ouput

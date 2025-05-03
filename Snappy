@@ -9,8 +9,8 @@ cd ${0%/*} || exit 1    # Run from this directory
 # echo "Using 8 processors"
 
 mkdir -p constant/triSurface
-# tar -zxf shuttle.stl.tar.gz -C constant/triSurface/.
-cp -r Millenium.stl constant/triSurface/shuttle.stl
+tar -zxf shuttle.stl.tar.gz -C constant/triSurface/.
+# cp -r Millenium.stl constant/triSurface/shuttle.stl
 
 runApplication blockMesh # create the mesh
 runApplication checkMesh # check the mesh
