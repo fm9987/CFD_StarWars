@@ -10,4 +10,5 @@ rm -r log.decomposePar
 runApplication decomposePar # Splits into cores
 runParallel rhoCentralFoam # Simulation
 runApplication reconstructPar # Ouput
+rm -r proc*
 #------------------------------------------------------------------------------
