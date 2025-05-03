@@ -1,0 +1,45 @@
+(The following commands explain how this file actually works)
+All you have to do to run the sim is use the command ./Allrun
+
+# Step 1 (Geometry creation):
+- Import the .stl file of spaceship
+- Once you have that make sure the triangles are small
+- Use gmsh in case that the triangles are too big and save with new geometry
+- After this run:
+gmsh meshSTEP.geo
+
+- This will create the new STL file we will use for our simulation
+- Copy it inside the triSurface directory
+cp -r shuttle.stl constant/triSurface/
+
+- After this run the surfaceFeatures command to get the new eMesh file needed:
+surfaceFeatures
+
+- Check that the dimensions of the box are correct so run blockMesh and look at the stl file.
+blockMesh 
+
+- For this keep going until everything is right, and fix the input output of the sim
+- After this is done we can create the domain
+blockMesh
+checkMesh
+
+- Once these two run with no problems we can start adding the stl mesh into it:
+- (Suggestion here, first check the boxes are working with castellatedMesh and then you have your
+castellated mesh which will be used for simulation since snap doesn't work)
+
+- After this runs look inside the 0 directory, if there are files that are not T, U, p erase them
+rm -r 0/"Name of file"
+
+
+
+
+# Step 2 (Simulation):
+- Once all else is done we can start the simulation on multiple cores (change the number in system/decomposeParDict):
+- (If ran locally)
+decomposePar
+mpirun -np 8 rhoCentralFoam -parallel
+
+- Once the simulation is over you have to reconstruct it:
+reconstructPar
+
+# NOW YOUR SIMULATION IS READY TO BE LOOKED IN PARAVIEW!
