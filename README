@@ -1,3 +1,6 @@
+(The following commands explain how this file actually works)
+All you have to do to run the sim is use the command ./Allrun
+
 # Step 1 (Geometry creation):
 - Import the .stl file of spaceship
 - Once you have that make sure the triangles are small
@@ -21,9 +24,8 @@ blockMesh
 checkMesh
 
 - Once these two run with no problems we can start adding the stl mesh into it:
-- (Suggestion here, first check the boxes are working with castellatedMesh set to true and all else false)
-- (After this one is done and it works set snap also to true, but keep layers false! We are not doing viscous)
-snappyHexMesh -overwrite 
+- (Suggestion here, first check the boxes are working with castellatedMesh and then you have your
+castellated mesh which will be used for simulation since snap doesn't work)
 
 - After this runs look inside the 0 directory, if there are files that are not T, U, p erase them
 rm -r 0/"Name of file"
