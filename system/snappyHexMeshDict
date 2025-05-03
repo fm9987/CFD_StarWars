@@ -92,7 +92,7 @@ castellatedMeshControls
     (
         {
             file "shuttle.eMesh";
-            level 7; //10
+            level 8; //10
         }
     );
 
@@ -112,7 +112,7 @@ castellatedMeshControls
         shuttle 
         {
             // Surface-wise min and max refinement level
-            level (6 7); //9 10
+            level (7 8); //9 10
 
         }
     }
