@@ -3,9 +3,9 @@
 # See https://portal.tacc.utexas.edu/user-guides/stampede2/#running 
 # for more details
 
-#SBATCH -J Xwing      # Job name
-#SBATCH -o Xwing.Sim       # Name of stdout output file
-#SBATCH -e Xwing.errors       # Name of stderr error file
+#SBATCH -J Venator      # Job name
+#SBATCH -o Venator.Sim       # Name of stdout output file
+#SBATCH -e Venator.errors       # Name of stderr error file
 
 #SBATCH -p normal          # Queue (partition) name
 ### #SBATCH -p development          # Queue (partition) name
