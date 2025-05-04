@@ -112,7 +112,7 @@ castellatedMeshControls
         shuttle 
         {
             // Surface-wise min and max refinement level
-            level (7 8); //9 10
+            level (7 9); //9 10
 
         }
     }

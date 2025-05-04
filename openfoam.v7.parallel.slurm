@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 # See https://portal.tacc.utexas.edu/user-guides/stampede2/#running 
 # for more details
@@ -24,7 +24,8 @@
 # Other commands must follow all #SBATCH directives...
 
 module purge
-module load intel/18.0.2  libfabric/1.7.0  impi/18.0.2 openfoam/7.0
+module load intel/19.0.5 impi/19.0.9
+module load openfoam/7.0
 module list
 
 pwd
